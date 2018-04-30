@@ -25,7 +25,7 @@ public:
 	static_assert(std::is_floating_point_v<ValueType>, "Length can only be represented by floating point values.");
 
 	ValueType value;
-			
+
 	/// <summary>
 	/// Returns maximal possible value.
 	/// </summary>
@@ -121,10 +121,10 @@ public:
 	constexpr bool nearlyEqual(Length<TLengthType2nd, TRatioType2nd> const &rhs_, ValueType const tolerance_) const // Internal compiler error :( // = constants::MediumTolerance<ValueType>) const
 	{
 		using div_ratio = std::ratio_divide<TRatioType2nd, RatioType>;
-		return math::nearlyEqual(value, static_cast<ValueType>(static_cast<TLengthType2nd>(rhs_.value) * div_ratio::num / div_ratio::den), tolerance_);
+		return nearlyEqual(value, static_cast<ValueType>(static_cast<TLengthType2nd>(rhs_.value) * div_ratio::num / div_ratio::den), tolerance_);
 	}
 };
-		
+
 /// <summary>
 /// Adds rhs_ length to lhs_.
 /// </summary>
