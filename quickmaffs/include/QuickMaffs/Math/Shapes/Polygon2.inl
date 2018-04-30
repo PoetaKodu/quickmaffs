@@ -41,28 +41,6 @@ void Polygon2<TValueType>::addPoint(VertexType const& value_)
 
 ////////////////////////////////////////////////////////////////////////////////////////
 template <typename TValueType>
-bool Polygon2<TValueType>::isPointInside(VertexType const& point_) const
-{
-	if (m_points.size() < 3)
-		return false;
-
-	// What the fuck?
-	// https://stackoverflow.com/a/2922778/4386320
-	bool check = false;
-	for (typename ContainerType::size_type i = 0, j = m_points.size() - 1; i < m_points.size(); j = i++)
-	{
-		if (((m_points[i].y > point_.y) != (m_points[j].y > point_.y)) &&
-			(point_.x < (m_points[j].x - m_points[i].x) * (point_.y - m_points[i].y) / (m_points[j].y - m_points[i].y) +
-				m_points[i].x))
-		{
-			check = !check;
-		}
-	}
-	return check;
-}
-
-////////////////////////////////////////////////////////////////////////////////////////
-template <typename TValueType>
 typename Polygon2<TValueType>::ContainerType::size_type Polygon2<TValueType>::getPointCount() const
 {
 	return m_points.size();

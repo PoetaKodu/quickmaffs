@@ -63,15 +63,6 @@ public:
 	void addPoint(VertexType const& value_);
 
 	/// <summary>
-	/// Determines whether the specified point is inside polygon.
-	/// </summary>
-	/// <param name="point_">The point.</param>
-	/// <returns>
-	///   <c>true</c> if point is inside; otherwise, <c>false</c>.
-	/// </returns>
-	bool isPointInside(VertexType const& point_) const;
-
-	/// <summary>
 	/// Returns the point count.
 	/// </summary>
 	/// <returns>Point count.</returns>
