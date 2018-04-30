@@ -300,7 +300,7 @@ public:
 	/// </returns>
 	template <typename TEqualityType = ValueType,
 		typename = std::enable_if_t< std::is_floating_point_v<TEqualityType> > >
-	constexpr bool nearlyEqual(Vector3 const & other_, TEqualityType const equalityTolerance_ = constants::LowTolerance<TEqualityType>) const
+	constexpr bool nearlyEqual(Vector3 const & other_, TEqualityType const equalityTolerance_) const // Internal compiler error. // = constants::LowTolerance<TEqualityType>) const
 	{
 		return (
 			std::abs(static_cast<TEqualityType>(x) - static_cast<TEqualityType>(other_.x)) <= equalityTolerance_ &&
