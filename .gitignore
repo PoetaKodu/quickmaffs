@@ -32,3 +32,6 @@
 *.app
 /.vs
 /quickmaffs/.vs/quickmaffs/v15/Preview
+/quickmaffs/intermediate/Win32/Debug
+/QuickMaffs.Tests/intermediate/Win32/Debug
+/QuickMaffs.Tests/output/Win32/Debug

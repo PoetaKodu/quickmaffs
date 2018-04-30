@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27625.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "quickmaffs", "quickmaffs\quickmaffs.vcxproj", "{BBE9BCEA-9C2B-484C-8346-4E149446BB10}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuickMaffs.Tests", "QuickMaffs.Tests\QuickMaffs.Tests.vcxproj", "{524EE367-DFA5-401D-AC8E-441B019EAC56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{BBE9BCEA-9C2B-484C-8346-4E149446BB10}.Release|x64.Build.0 = Release|x64
 		{BBE9BCEA-9C2B-484C-8346-4E149446BB10}.Release|x86.ActiveCfg = Release|Win32
 		{BBE9BCEA-9C2B-484C-8346-4E149446BB10}.Release|x86.Build.0 = Release|Win32
+		{524EE367-DFA5-401D-AC8E-441B019EAC56}.Debug|x64.ActiveCfg = Debug|x64
+		{524EE367-DFA5-401D-AC8E-441B019EAC56}.Debug|x64.Build.0 = Debug|x64
+		{524EE367-DFA5-401D-AC8E-441B019EAC56}.Debug|x86.ActiveCfg = Debug|Win32
+		{524EE367-DFA5-401D-AC8E-441B019EAC56}.Debug|x86.Build.0 = Debug|Win32
+		{524EE367-DFA5-401D-AC8E-441B019EAC56}.Release|x64.ActiveCfg = Release|x64
+		{524EE367-DFA5-401D-AC8E-441B019EAC56}.Release|x64.Build.0 = Release|x64
+		{524EE367-DFA5-401D-AC8E-441B019EAC56}.Release|x86.ActiveCfg = Release|Win32
+		{524EE367-DFA5-401D-AC8E-441B019EAC56}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
