@@ -56,8 +56,8 @@ public:
 	/// <summary>
 	/// Default constructor.
 	/// </summary>
-	constexpr Length(ValueType value_ = ValueType{ 0 })
-		: value(value_)
+	constexpr Length(ValueType const value_ = ValueType(0))
+		: value{ value_ }
 	{
 	}
 
