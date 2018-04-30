@@ -1,47 +1,47 @@
 // Note: this file is not meant to be included on its own.
-// Include "Polygon.hpp" instead.
+// Include "Polygon2.hpp" instead.
 
 namespace quickmaffs
 {
 	
 ////////////////////////////////////////////////////////////////////////////////////////
 template <typename TValueType>
-Polygon<TValueType>::Polygon(const ContainerType& points_)
+Polygon2<TValueType>::Polygon2(const ContainerType& points_)
 	: m_points{ points_ }
 {
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 template <typename TValueType>
-Polygon<TValueType>::Polygon(ContainerType&& points_)
+Polygon2<TValueType>::Polygon2(ContainerType&& points_)
 	: m_points{ std::forward< ContainerType >(points_) }
 {
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 template <typename TValueType>
-void Polygon<TValueType>::setPointCount(typename ContainerType::size_type const size_)
+void Polygon2<TValueType>::setPointCount(typename ContainerType::size_type const size_)
 {
 	m_points.resize(size_);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 template <typename TValueType>
-void Polygon<TValueType>::setPoint(typename ContainerType::size_type const index_, VertexType const& value_)
+void Polygon2<TValueType>::setPoint(typename ContainerType::size_type const index_, VertexType const& value_)
 {
 	m_points[index_] = value_;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 template <typename TValueType>
-void Polygon<TValueType>::addPoint(VertexType const& value_)
+void Polygon2<TValueType>::addPoint(VertexType const& value_)
 {
 	m_points.push_back(value_);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 template <typename TValueType>
-bool Polygon<TValueType>::isPointInside(VertexType const& point_) const
+bool Polygon2<TValueType>::isPointInside(VertexType const& point_) const
 {
 	if (m_points.size() < 3)
 		return false;
@@ -63,25 +63,25 @@ bool Polygon<TValueType>::isPointInside(VertexType const& point_) const
 
 ////////////////////////////////////////////////////////////////////////////////////////
 template <typename TValueType>
-typename Polygon<TValueType>::ContainerType::size_type Polygon<TValueType>::getPointCount() const
+typename Polygon2<TValueType>::ContainerType::size_type Polygon2<TValueType>::getPointCount() const
 {
 	return m_points.size();
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 template <typename TValueType>
-typename Polygon<TValueType>::ContainerType const& Polygon< TValueType >::getPoints() const
+typename Polygon2<TValueType>::ContainerType const& Polygon2< TValueType >::getPoints() const
 {
 	return m_points;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 template <typename TValueType>
-Polygon<TValueType> Polygon<TValueType>::rectangle(ValueType const width_, ValueType const height_, bool const centered_)
+Polygon2<TValueType> Polygon2<TValueType>::rectangle(ValueType const width_, ValueType const height_, bool const centered_)
 {
 	if (centered_)
 	{
-		return Polygon{
+		return Polygon2{
 				{
 					{ -width_ / ValueType(2), -height_ / ValueType(2) }, // top left
 					{  width_ / ValueType(2), -height_ / ValueType(2) }, // top right
@@ -92,7 +92,7 @@ Polygon<TValueType> Polygon<TValueType>::rectangle(ValueType const width_, Value
 	}
 	else
 	{
-		return Polygon{
+		return Polygon2{
 				{
 					{ ValueType(0), ValueType(0) }, // top left
 					{ width_,		ValueType(0) }, // top right
@@ -105,14 +105,14 @@ Polygon<TValueType> Polygon<TValueType>::rectangle(ValueType const width_, Value
 
 ////////////////////////////////////////////////////////////////////////////////////////
 template <typename TValueType>
-Polygon<TValueType> Polygon<TValueType>::square(ValueType const size_, bool const centered_)
+Polygon2<TValueType> Polygon2<TValueType>::square(ValueType const size_, bool const centered_)
 {
-	return Polygon::rectangle(size_, size_, centered_);
+	return Polygon2::rectangle(size_, size_, centered_);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 template <typename TValueType>
-Polygon<TValueType> Polygon<TValueType>::ellipse(ValueType const xRadius_, ValueType const yRadius_,
+Polygon2<TValueType> Polygon2<TValueType>::ellipse(ValueType const xRadius_, ValueType const yRadius_,
 													std::size_t pointCount_)
 {
 	pointCount_ = std::max(std::size_t(3), pointCount_);
@@ -127,14 +127,14 @@ Polygon<TValueType> Polygon<TValueType>::ellipse(ValueType const xRadius_, Value
 			};
 	}
 
-	return Polygon{ std::move(points) };
+	return Polygon2{ std::move(points) };
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 template <typename TValueType>
-Polygon<TValueType> Polygon<TValueType>::circle(ValueType const radius_, std::size_t pointCount_)
+Polygon2<TValueType> Polygon2<TValueType>::circle(ValueType const radius_, std::size_t pointCount_)
 {
-	return Polygon::ellipse(radius_, radius_, pointCount_);
+	return Polygon2::ellipse(radius_, radius_, pointCount_);
 }
 
 }

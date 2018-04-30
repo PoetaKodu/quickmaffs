@@ -175,7 +175,7 @@
     <ClInclude Include="include\QuickMaffs\Math\Length.hpp" />
     <ClInclude Include="include\QuickMaffs\Math\Random.hpp" />
     <ClInclude Include="include\QuickMaffs\Math\ShapesInc.hpp" />
-    <ClInclude Include="include\QuickMaffs\Math\Shapes\Polygon.hpp" />
+    <ClInclude Include="include\QuickMaffs\Math\Shapes\Polygon2.hpp" />
     <ClInclude Include="include\QuickMaffs\Math\TypeTraits.hpp" />
     <ClInclude Include="include\QuickMaffs\Math\Vector2.hpp" />
     <ClInclude Include="include\QuickMaffs\Math\Vector3.hpp" />
@@ -194,7 +194,7 @@
   <ItemGroup>
     <None Include="include\QuickMaffs\Math\Helper.inl" />
     <None Include="include\QuickMaffs\Math\Random.inl" />
-    <None Include="include\QuickMaffs\Math\Shapes\Polygon.inl" />
+    <None Include="include\QuickMaffs\Math\Shapes\Polygon2.inl" />
     <None Include="src\QuickMaffs\SourceFiles.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

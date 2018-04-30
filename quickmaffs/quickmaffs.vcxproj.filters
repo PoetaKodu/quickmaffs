@@ -56,10 +56,10 @@
     <ClInclude Include="include\QuickMaffs\Math\VectorStringBuilder.hpp">
       <Filter>Header Files\Math</Filter>
     </ClInclude>
-    <ClInclude Include="include\QuickMaffs\Math\Shapes\Polygon.hpp">
+    <ClInclude Include="include\QuickMaffs\Math\ShapesInc.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\QuickMaffs\Math\ShapesInc.hpp">
+    <ClInclude Include="include\QuickMaffs\Math\Shapes\Polygon2.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -73,7 +73,7 @@
     <None Include="include\QuickMaffs\Math\Random.inl">
       <Filter>Header Files\Math</Filter>
     </None>
-    <None Include="include\QuickMaffs\Math\Shapes\Polygon.inl">
+    <None Include="include\QuickMaffs\Math\Shapes\Polygon2.inl">
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>

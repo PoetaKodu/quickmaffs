@@ -1,3 +1,3 @@
 #pragma once
 
-#include "Shapes/Polygon.hpp"
+#include <QuickMaffs/Math/Shapes/Polygon2.hpp>

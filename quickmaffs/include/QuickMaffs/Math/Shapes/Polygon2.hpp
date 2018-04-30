@@ -12,7 +12,7 @@ namespace quickmaffs
 /// Provides basic polygon implementation.
 /// </summary>
 template <typename TValueType>
-class Polygon
+class Polygon2
 {
 public:
 
@@ -27,21 +27,21 @@ public:
 	);
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="Polygon"/> class.
+	/// Initializes a new instance of the <see cref="Polygon2"/> class.
 	/// </summary>
-	Polygon() = default;
+	Polygon2() = default;
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="Polygon"/> class.
+	/// Initializes a new instance of the <see cref="Polygon2"/> class.
 	/// </summary>
 	/// <param name="points_">The points.</param>
-	Polygon(const ContainerType& points_);
+	Polygon2(const ContainerType& points_);
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="Polygon"/> class.
+	/// Initializes a new instance of the <see cref="Polygon2"/> class.
 	/// </summary>
 	/// <param name="points_">The points.</param>
-	Polygon(ContainerType&& points_);
+	Polygon2(ContainerType&& points_);
 
 	/// <summary>
 	/// Sets the point count.
@@ -89,14 +89,14 @@ public:
 	/// <param name="width_">The width.</param>
 	/// <param name="height_">The height.</param>
 	/// <returns>Rectangle shaped polygon.</returns>
-	static Polygon rectangle(ValueType const width_, ValueType const height_, bool const centered_ = true);
+	static Polygon2 rectangle(ValueType const width_, ValueType const height_, bool const centered_ = true);
 
 	/// <summary>
 	/// Creates square shaped polygon with specified edge length.
 	/// </summary>
 	/// <param name="size_">The size.</param>
 	/// <returns>Square shaped polygon.</returns>
-	static Polygon square(ValueType const size_, bool const centered_ = true);
+	static Polygon2 square(ValueType const size_, bool const centered_ = true);
 
 	/// <summary>
 	/// Creates ellipse shaped polygon with specified x-axis radius and y-axis radius.
@@ -105,7 +105,7 @@ public:
 	/// <param name="yRadius_">The y radius.</param>
 	/// <param name="pointCount_">The point count.</param>
 	/// <returns>Ellipse shaped polygon.</returns>
-	static Polygon ellipse(ValueType const xRadius_, ValueType const yRadius_, std::size_t pointCount_ = 32);
+	static Polygon2 ellipse(ValueType const xRadius_, ValueType const yRadius_, std::size_t pointCount_ = 32);
 
 	/// <summary>
 	/// Creates circle shaped polygon with specified radius.
@@ -113,12 +113,38 @@ public:
 	/// <param name="radius_">The radius.</param>
 	/// <param name="pointCount_">The point count.</param>
 	/// <returns>Circle shaped polygon.</returns>
-	static Polygon circle(ValueType const radius_, std::size_t pointCount_ = 32);
+	static Polygon2 circle(ValueType const radius_, std::size_t pointCount_ = 32);
 
 protected:
 	ContainerType m_points; // List (vector) of 2d points. Interpreted as connected lines, each starting at the end of previous. Last line connects last point to the first one.
 };
 
+// 2D Polygon class templated with float
+using Polygon2f = Polygon2<float>;
+// 2D Polygon class templated with double
+using Polygon2d = Polygon2<double>;
+// 2D Polygon class templated with long double
+using Polygon2ld = Polygon2<long double>;
+// 2D Polygon class templated with std::int8_t
+using Polygon2i8 = Polygon2<std::int8_t>;
+// 2D Polygon class templated with std::int16_t
+using Polygon2i16 = Polygon2<std::int16_t>;
+// 2D Polygon class templated with std::int32_t
+using Polygon2i32 = Polygon2<std::int32_t>;
+// 2D Polygon class templated with std::int64_t
+using Polygon2i64 = Polygon2<std::int64_t>;
+// 2D Polygon class templated with std::uint8_t
+using Polygon2u8 = Polygon2<std::uint8_t>;
+// 2D Polygon class templated with std::uint16_t
+using Polygon2u16 = Polygon2<std::uint16_t>;
+// 2D Polygon class templated with std::uint32_t
+using Polygon2u32 = Polygon2<std::uint32_t>;
+// 2D Polygon class templated with std::uint64_t
+using Polygon2u64 = Polygon2<std::uint64_t>;
+
+// 2D Polygon class templated with std::size_t
+using Polygon2size = Polygon2<std::size_t>;
+
 }
 
-#include "Polygon.inl"
+#include "Polygon2.inl"
