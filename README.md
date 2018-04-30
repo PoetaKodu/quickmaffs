@@ -156,7 +156,7 @@ struct Car {
 
 does not really express programmers intention. It should look like this:
 
-```
+```cpp
 Kilometers getTopSpeed() const {
     return 220.f; //  per hour? per second?
 }
@@ -164,7 +164,7 @@ Kilometers getTopSpeed() const {
 
 or more perfectly, like this:
 
-```
+```cpp
 Kilometers getTopSpeedPerHour() const {
     return 220.f;
 }
