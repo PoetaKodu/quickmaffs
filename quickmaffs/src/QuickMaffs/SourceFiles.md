@@ -10,7 +10,7 @@ by checking if `QUICKMAFFS_HEADER_ONLY` macro is defined:
 #include <QuickMaffs/Everything.hpp>
 
 #ifndef QUICKMAFFS_HEADER_ONLY
-#error "QuickMaffs needs to be compiled separately. After doing it, remove this error!"
+#error "QuickMaffs needs to be compiled separately! When QuickMaffs is properly linked, remove this error."
 #endif
 
 namespace math = quickmaffs; // alias the namespace not to use the long one.
