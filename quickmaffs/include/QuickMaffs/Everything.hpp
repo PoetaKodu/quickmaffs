@@ -9,10 +9,13 @@
 #define QUICKMAFFS_PCH "QuickMaffs/../../QuickMaffsPCH.hpp"
 #endif
 
-#include "Math/Helper.hpp"
-#include "Math/Length.hpp"
-#include "Math/TypeTraits.hpp"
-#include "Math/Random.hpp"
-#include "Math/Vector2.hpp"
-#include "Math/Vector3.hpp"
-#include "Math/VectorStringBuilder.hpp"
+#include <QuickMaffs/Math/Helper.hpp>
+#include <QuickMaffs/Math/Length.hpp>
+#include <QuickMaffs/Math/TypeTraits.hpp>
+#include <QuickMaffs/Math/Random.hpp>
+#include <QuickMaffs/Math/Vector2.hpp>
+#include <QuickMaffs/Math/Vector3.hpp>
+#include <QuickMaffs/Math/VectorStringBuilder.hpp>
+
+// Shapes:
+#include <QuickMaffs/Math/ShapesInc.hpp>
