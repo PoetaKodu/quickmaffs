@@ -663,12 +663,18 @@ public:
 using Vector3f		= Vector3<float>;
 // 3D Vector class templated with double
 using Vector3d		= Vector3<double>;
+// 3D Vector class templated with long double
+using Vector3ld		= Vector3<long double>;
+// 3D Vector class templated with std::int8_t
+using Vector3i8		= Vector3<std::int8_t>;
 // 3D Vector class templated with std::int16_t
 using Vector3i16	= Vector3<std::int16_t>;
 // 3D Vector class templated with std::int32_t
 using Vector3i32	= Vector3<std::int32_t>;
 // 3D Vector class templated with std::int64_t
 using Vector3i64	= Vector3<std::int64_t>;
+// 3D Vector class templated with std::int8_t
+using Vector3u8		= Vector3<std::uint8_t>;
 // 3D Vector class templated with std::uint16_t
 using Vector3u16	= Vector3<std::uint16_t>;
 // 3D Vector class templated with std::uint32_t

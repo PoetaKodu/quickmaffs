@@ -658,12 +658,18 @@ public:
 using Vector2f		= Vector2<float>;
 // 2D Vector class templated with double
 using Vector2d		= Vector2<double>;
+// 2D Vector class templated with long double
+using Vector2ld		= Vector2<long double>;
+// 2D Vector class templated with std::int8_t
+using Vector2i8		= Vector2<std::int8_t>;
 // 2D Vector class templated with std::int16_t
 using Vector2i16	= Vector2<std::int16_t>;
 // 2D Vector class templated with std::int32_t
 using Vector2i32	= Vector2<std::int32_t>;
 // 2D Vector class templated with std::int64_t
 using Vector2i64	= Vector2<std::int64_t>;
+// 2D Vector class templated with std::uint8_t
+using Vector2u8		= Vector2<std::uint8_t>;
 // 2D Vector class templated with std::uint16_t
 using Vector2u16	= Vector2<std::uint16_t>;
 // 2D Vector class templated with std::uint32_t
