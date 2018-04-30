@@ -6,6 +6,13 @@ namespace quickmaffs::type_traits
 {
 
 template <typename TType>
+struct identity {
+	using type = TType;
+};
+template <typename TType>
+using identityT = typename identity<TType>::type;
+
+template <typename TType>
 struct removeCVRef {
 	using type = std::remove_reference_t < std::remove_cv_t<TType> >;
 };
