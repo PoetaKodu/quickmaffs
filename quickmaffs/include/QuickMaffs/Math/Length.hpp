@@ -169,7 +169,7 @@ inline constexpr Length<TLengthType1st, TRatioType1st> operator-(Length<TLengthT
 /// <para>Resulting type matches length type.</para>
 /// </remarks>
 template <	typename TLengthType, typename RatioType, typename TScalarType,
-			typename = std::enable_if_t< std::is_floating_point_v< std::remove_reference_t< std::remove_cv_t<TScalarType> > > > >
+			typename = std::enable_if_t< std::is_floating_point_v< type_traits::removeCVRefT<TScalarType> > > >
 inline constexpr Length<TLengthType, RatioType> operator*(Length<TLengthType, RatioType> const & lhs_, TScalarType const scalar_)
 {
 	return { lhs_.value * scalar_ };
@@ -185,7 +185,7 @@ inline constexpr Length<TLengthType, RatioType> operator*(Length<TLengthType, Ra
 /// <para>Resulting type matches length type.</para>
 /// </remarks>
 template <	typename TLengthType, typename RatioType, typename TScalarType,
-			std::enable_if_t< std::is_floating_point_v< std::remove_reference_t< std::remove_cv_t<TScalarType> > > > >
+			typename = std::enable_if_t< std::is_floating_point_v< type_traits::removeCVRefT<TScalarType> > > >
 inline constexpr Length<TLengthType, RatioType> operator/(Length<TLengthType, RatioType> const & lhs_, TScalarType const scalar_)
 {
 	return { lhs_.value / scalar_ };
@@ -201,7 +201,7 @@ inline constexpr Length<TLengthType, RatioType> operator/(Length<TLengthType, Ra
 /// <para>Resulting type matches length type.</para>
 /// </remarks>
 template <	typename TScalarType, typename TLengthType, typename RatioType,
-			typename = std::enable_if_t< std::is_floating_point_v< std::remove_reference_t< std::remove_cv_t<TScalarType> > > > >
+			typename = std::enable_if_t< std::is_floating_point_v< type_traits::removeCVRefT<TScalarType> > > >
 inline constexpr Length<TLengthType, RatioType> operator*(TScalarType const scalar_, Length<TLengthType, RatioType> const & rhs_)
 {
 	return { rhs_.value * scalar_ };
@@ -217,7 +217,7 @@ inline constexpr Length<TLengthType, RatioType> operator*(TScalarType const scal
 /// <para>Resulting type matches length type.</para>
 /// </remarks>
 template <	typename TScalarType, typename TLengthType, typename RatioType,
-			typename = std::enable_if_t< std::is_floating_point_v< std::remove_reference_t< std::remove_cv_t<TScalarType> > > > >
+			typename = std::enable_if_t< std::is_floating_point_v< type_traits::removeCVRefT<TScalarType> > > >
 inline constexpr Length<TLengthType, RatioType> operator/(TScalarType const scalar_, Length<TLengthType, RatioType> const & rhs_)
 {
 	return { rhs_.value / scalar_ };
