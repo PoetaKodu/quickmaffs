@@ -119,7 +119,7 @@ it, using `convert` template method:
 ```cpp
 Vector3i32 vec3 = { 200, 50, 10 };
 // Vector3f vec3f = 5.f * vec3; // error! multiplication: float with Vector3i32
-Vector3f = vec3f = 5.f * vec3.convert<float>(); // Ok
+Vector3f vec3f = 5.f * vec3.convert<float>(); // Ok
 ```
 
 #### List of other useful methods:
@@ -154,7 +154,7 @@ struct Car {
 };
 ```
 
-does not really express programmers intention. It should look like this:
+does not really express programmer's intention. It should look like this:
 
 ```cpp
 Kilometers getTopSpeed() const {
