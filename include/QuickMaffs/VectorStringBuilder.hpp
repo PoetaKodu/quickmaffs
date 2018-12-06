@@ -3,7 +3,7 @@
 #pragma once
 
 // Precompiled header:
-#include QUICKMAFFS_PCH
+#include "Private/PrecompiledHeader.hpp"
 
 namespace quickmaffs
 {

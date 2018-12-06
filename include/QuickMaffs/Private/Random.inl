@@ -4,7 +4,7 @@
 namespace quickmaffs::random
 {
 
-namespace detail
+namespace priv
 {
 constexpr bool cxNoRandomDevice = false;
 
@@ -101,16 +101,16 @@ inline TType generate(TType const & from_, TType const & to_)
 	if constexpr(cxIsIntegerType)
 	{
 		if constexpr(cxCanUse32BitEngine)
-			return std::uniform_int_distribution<TType>(minValue, maxValue)(detail::getGenerator());
+			return std::uniform_int_distribution<TType>(minValue, maxValue)(priv::getGenerator());
 		else
-			return std::uniform_int_distribution<TType>(minValue, maxValue)(detail::getGenerator64());
+			return std::uniform_int_distribution<TType>(minValue, maxValue)(priv::getGenerator64());
 	}
 	else // For every real (floating point) type:
 	{
 		if constexpr(cxCanUse32BitEngine)
-			return std::uniform_real_distribution<TType>(minValue, maxValue)(detail::getGenerator());
+			return std::uniform_real_distribution<TType>(minValue, maxValue)(priv::getGenerator());
 		else
-			return std::uniform_real_distribution<TType>(minValue, maxValue)(detail::getGenerator64());
+			return std::uniform_real_distribution<TType>(minValue, maxValue)(priv::getGenerator64());
 	}
 }
 

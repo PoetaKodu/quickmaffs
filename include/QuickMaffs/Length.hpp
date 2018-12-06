@@ -3,9 +3,9 @@
 #pragma once
 
 // Precompiled header:
-#include QUICKMAFFS_PCH
+#include "Private/PrecompiledHeader.hpp"
 
-#include "Helper.hpp"
+#include "Private/Helper.hpp"
 #include "TypeTraits.hpp"
 
 namespace quickmaffs
@@ -121,7 +121,7 @@ public:
 	constexpr bool nearlyEqual(Length<TLengthType2nd, TRatioType2nd> const &rhs_, ValueType const tolerance_) const // Internal compiler error :( // = constants::MediumTolerance<ValueType>) const
 	{
 		using div_ratio = std::ratio_divide<TRatioType2nd, RatioType>;
-		return nearlyEqual(value, static_cast<ValueType>(static_cast<TLengthType2nd>(rhs_.value) * div_ratio::num / div_ratio::den), tolerance_);
+		return quickmaffs::nearlyEqual(value, static_cast<ValueType>(static_cast<TLengthType2nd>(rhs_.value) * div_ratio::num / div_ratio::den), tolerance_);
 	}
 };
 

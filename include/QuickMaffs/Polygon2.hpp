@@ -1,9 +1,9 @@
 #pragma once
 
-#include QUICKMAFFS_PCH
+#include "Private/PrecompiledHeader.hpp"
 
-#include <QuickMaffs/Math/Vector2.hpp>
-#include <QuickMaffs/Math/TypeTraits.hpp>
+#include "Vector2.hpp"
+#include "TypeTraits.hpp"
 
 namespace quickmaffs
 {
@@ -110,32 +110,32 @@ protected:
 	ContainerType m_points; // List (vector) of 2d points. Interpreted as connected lines, each starting at the end of previous. Last line connects last point to the first one.
 };
 
-// 2D Polygon class templated with float
+// 2D Polygon class specialized with float
 using Polygon2f = Polygon2<float>;
-// 2D Polygon class templated with double
+// 2D Polygon class specialized with double
 using Polygon2d = Polygon2<double>;
-// 2D Polygon class templated with long double
+// 2D Polygon class specialized with long double
 using Polygon2ld = Polygon2<long double>;
-// 2D Polygon class templated with std::int8_t
+// 2D Polygon class specialized with std::int8_t
 using Polygon2i8 = Polygon2<std::int8_t>;
-// 2D Polygon class templated with std::int16_t
+// 2D Polygon class specialized with std::int16_t
 using Polygon2i16 = Polygon2<std::int16_t>;
-// 2D Polygon class templated with std::int32_t
+// 2D Polygon class specialized with std::int32_t
 using Polygon2i32 = Polygon2<std::int32_t>;
-// 2D Polygon class templated with std::int64_t
+// 2D Polygon class specialized with std::int64_t
 using Polygon2i64 = Polygon2<std::int64_t>;
-// 2D Polygon class templated with std::uint8_t
+// 2D Polygon class specialized with std::uint8_t
 using Polygon2u8 = Polygon2<std::uint8_t>;
-// 2D Polygon class templated with std::uint16_t
+// 2D Polygon class specialized with std::uint16_t
 using Polygon2u16 = Polygon2<std::uint16_t>;
-// 2D Polygon class templated with std::uint32_t
+// 2D Polygon class specialized with std::uint32_t
 using Polygon2u32 = Polygon2<std::uint32_t>;
-// 2D Polygon class templated with std::uint64_t
+// 2D Polygon class specialized with std::uint64_t
 using Polygon2u64 = Polygon2<std::uint64_t>;
 
-// 2D Polygon class templated with std::size_t
+// 2D Polygon class specialized with std::size_t
 using Polygon2size = Polygon2<std::size_t>;
 
 }
 
-#include "Polygon2.inl"
+#include "Private/Polygon2.inl"

@@ -3,12 +3,12 @@
 #pragma once
 
 // Precompiled header:
-#include QUICKMAFFS_PCH
+#include "Private/PrecompiledHeader.hpp"
 
 namespace quickmaffs::random
 {
 
-namespace detail
+namespace priv
 {
 
 /// <summary>
@@ -23,7 +23,7 @@ std::mt19937& getGenerator();
 /// <returns>Reference to Mersenne Twister random engine (64 bit).</returns>
 std::mt19937_64& getGenerator64();
 
-} // namespace detail
+} // namespace priv
 
 /// <summary>
 /// Generates random number of type T.
@@ -48,4 +48,4 @@ TType generate(TType const & from_, TType const & to_);
 
 } // namespace
 
-#include "Random.inl"
+#include "Private/Random.inl"

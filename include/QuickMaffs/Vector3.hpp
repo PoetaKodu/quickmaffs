@@ -1,14 +1,10 @@
-// File description:
-// Implements base class for 3D vector manipulation.
-// TODO: implement iterators for Vector3.
-
 #pragma once
 
 // Precompiled header:
-#include QUICKMAFFS_PCH
+#include "Private/PrecompiledHeader.hpp"
 
 // Custom includes:
-#include "Helper.hpp"
+#include "Private/Helper.hpp"
 #include "VectorStringBuilder.hpp"
 
 #include "TypeTraits.hpp"
@@ -17,7 +13,7 @@ namespace quickmaffs
 {
 
 /// <summary>
-/// Implements templated three dimensional vector arithmetic class.
+/// Implements specialized three dimensional vector arithmetic class.
 /// </summary>
 template <typename TVectorType>
 class Vector3
@@ -423,7 +419,7 @@ public:
 	///  <c>true</c> if vectors are equal; otherwise, <c>false</c>.
 	/// </returns>
 	constexpr bool operator == (Vector3 const & vector_) const {
-		return equals(vector_, constants::LowTolerance<ValueType>);
+		return nearlyEqual(vector_, constants::LowTolerance<ValueType>);
 	}
 
 	/// <summary>
@@ -434,7 +430,7 @@ public:
 	///  <c>true</c> if vectors are not equal; otherwise, <c>false</c>.
 	/// </returns>
 	constexpr bool operator != (Vector3 const & vector_) const {
-		return !equals(vector_, constants::LowTolerance<ValueType>);
+		return !nearlyEqual(vector_, constants::LowTolerance<ValueType>);
 	}
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -659,30 +655,30 @@ public:
 
 
 
-// 3D Vector class templated with float
+// 3D Vector class specialized with float
 using Vector3f		= Vector3<float>;
-// 3D Vector class templated with double
+// 3D Vector class specialized with double
 using Vector3d		= Vector3<double>;
-// 3D Vector class templated with long double
+// 3D Vector class specialized with long double
 using Vector3ld		= Vector3<long double>;
-// 3D Vector class templated with std::int8_t
+// 3D Vector class specialized with std::int8_t
 using Vector3i8		= Vector3<std::int8_t>;
-// 3D Vector class templated with std::int16_t
+// 3D Vector class specialized with std::int16_t
 using Vector3i16	= Vector3<std::int16_t>;
-// 3D Vector class templated with std::int32_t
+// 3D Vector class specialized with std::int32_t
 using Vector3i32	= Vector3<std::int32_t>;
-// 3D Vector class templated with std::int64_t
+// 3D Vector class specialized with std::int64_t
 using Vector3i64	= Vector3<std::int64_t>;
-// 3D Vector class templated with std::int8_t
+// 3D Vector class specialized with std::int8_t
 using Vector3u8		= Vector3<std::uint8_t>;
-// 3D Vector class templated with std::uint16_t
+// 3D Vector class specialized with std::uint16_t
 using Vector3u16	= Vector3<std::uint16_t>;
-// 3D Vector class templated with std::uint32_t
+// 3D Vector class specialized with std::uint32_t
 using Vector3u32	= Vector3<std::uint32_t>;
-// 3D Vector class templated with std::uint64_t
+// 3D Vector class specialized with std::uint64_t
 using Vector3u64	= Vector3<std::uint64_t>;
 
-// 3D Vector class templated with std::size_t
+// 3D Vector class specialized with std::size_t
 using Vector3size	= Vector3<std::size_t>;
 
 } // namespace agdk

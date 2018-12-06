@@ -1,7 +1,7 @@
 #pragma once
 
-#include <QuickMaffs/Math/Vector2.hpp>
-#include <QuickMaffs/Math/Vector3.hpp>
+#include "Vector2.hpp"
+#include "Vector3.hpp"
 
 namespace quickmaffs
 {
@@ -59,10 +59,10 @@ private:
 };
 
 template <typename TValueType>
-using Rect2		= Box<Vector2, TValueType>;
+using Rect2			= Box<Vector2, TValueType>;
 
 template <typename TValueType>
-using Cuboid3	= Box<Vector3, TValueType>;
+using Cuboid3		= Box<Vector3, TValueType>;
 
 using Rect2f		= Rect2<float>;
 using Rect2d		= Rect2<double>;
@@ -90,4 +90,4 @@ using Cuboid3u64	= Cuboid3<std::uint64_t>;
 
 }
 
-#include "Box.inl"
+#include "Private/Box.inl"

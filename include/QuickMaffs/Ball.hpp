@@ -1,9 +1,9 @@
 #pragma once
 
-#include QUICKMAFFS_PCH
+#include "Private/PrecompiledHeader.hpp"
 
-#include <QuickMaffs/Math/Vector2.hpp>
-#include <QuickMaffs/Math/Vector3.hpp>
+#include "Vector2.hpp"
+#include "Vector3.hpp"
 
 namespace quickmaffs
 {
@@ -93,4 +93,4 @@ using Sphere3u64	= Sphere3<std::uint64_t>;
 }
 
 
-#include "Ball.inl"
+#include "Private/Ball.inl"

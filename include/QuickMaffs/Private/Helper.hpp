@@ -1,6 +1,6 @@
 #pragma once
 
-#include QUICKMAFFS_PCH
+#include "PrecompiledHeader.hpp"
 
 namespace quickmaffs
 {
@@ -26,7 +26,7 @@ template <>
 constexpr const char32_t* Pi<const char32_t*>	= U"Pi";
 
 template <typename TType, typename = std::enable_if_t< std::is_floating_point_v<TType> || std::is_integral_v<TType> > >
-constexpr TType LowTolerance			= static_cast<TType>(0.000'001);
+constexpr TType LowTolerance		= static_cast<TType>(0.000'001);
 template <typename TType, typename = std::enable_if_t< std::is_floating_point_v<TType> || std::is_integral_v<TType> > >
 constexpr TType MediumTolerance		= static_cast<TType>(0.000'01);
 template <typename TType, typename = std::enable_if_t< std::is_floating_point_v<TType> || std::is_integral_v<TType> > >
@@ -81,6 +81,6 @@ TType convertToRadians(TType const degrees_);
 template <typename TType>
 TType convertToDegrees(TType const radians_);
 
-} // namespace
+} // namespace quickmaffs
 
 #include "Helper.inl"

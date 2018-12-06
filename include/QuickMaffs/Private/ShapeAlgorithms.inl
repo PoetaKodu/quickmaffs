@@ -1,6 +1,5 @@
-#include "Algorithm.hpp"
 // Note: this file is not meant to be included on its own.
-// Include "Algorithm.hpp" instead.
+// Include "ShapeAlgorithms.hpp" instead.
 
 namespace quickmaffs
 {

@@ -1,14 +1,10 @@
-// File description:
-// Implements base class for 2D vector manipulation.
-// TODO: implement vectors.
-
 #pragma once
 
 // Precompiled header:
-#include QUICKMAFFS_PCH
+#include "Private/PrecompiledHeader.hpp"
 
 // Custom includes:
-#include "Helper.hpp"
+#include "Private/Helper.hpp"
 #include "VectorStringBuilder.hpp"
 
 #include "TypeTraits.hpp"
@@ -17,7 +13,7 @@ namespace quickmaffs
 {
 
 /// <summary>
-/// Implements templated two dimensional vector arithmetic class.
+/// Implements specialized two dimensional vector arithmetic class.
 /// </summary>
 template <typename TValueType>
 class Vector2
@@ -654,30 +650,30 @@ public:
 	}
 };
 
-// 2D Vector class templated with float
+// 2D Vector class specialized with float
 using Vector2f		= Vector2<float>;
-// 2D Vector class templated with double
+// 2D Vector class specialized with double
 using Vector2d		= Vector2<double>;
-// 2D Vector class templated with long double
+// 2D Vector class specialized with long double
 using Vector2ld		= Vector2<long double>;
-// 2D Vector class templated with std::int8_t
+// 2D Vector class specialized with std::int8_t
 using Vector2i8		= Vector2<std::int8_t>;
-// 2D Vector class templated with std::int16_t
+// 2D Vector class specialized with std::int16_t
 using Vector2i16	= Vector2<std::int16_t>;
-// 2D Vector class templated with std::int32_t
+// 2D Vector class specialized with std::int32_t
 using Vector2i32	= Vector2<std::int32_t>;
-// 2D Vector class templated with std::int64_t
+// 2D Vector class specialized with std::int64_t
 using Vector2i64	= Vector2<std::int64_t>;
-// 2D Vector class templated with std::uint8_t
+// 2D Vector class specialized with std::uint8_t
 using Vector2u8		= Vector2<std::uint8_t>;
-// 2D Vector class templated with std::uint16_t
+// 2D Vector class specialized with std::uint16_t
 using Vector2u16	= Vector2<std::uint16_t>;
-// 2D Vector class templated with std::uint32_t
+// 2D Vector class specialized with std::uint32_t
 using Vector2u32	= Vector2<std::uint32_t>;
-// 2D Vector class templated with std::uint64_t
+// 2D Vector class specialized with std::uint64_t
 using Vector2u64	= Vector2<std::uint64_t>;
 
-// 2D Vector class templated with std::size_t
+// 2D Vector class specialized with std::size_t
 using Vector2size	= Vector2<std::size_t>;
 
 } // namespace quickmaffs

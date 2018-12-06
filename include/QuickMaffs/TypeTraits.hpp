@@ -1,6 +1,6 @@
 #pragma once
 
-#include QUICKMAFFS_PCH
+#include "Private/PrecompiledHeader.hpp"
 
 namespace quickmaffs::type_traits
 {

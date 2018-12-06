@@ -1,10 +1,10 @@
 #pragma once
 
-#include <QuickMaffs/Math/Vector2.hpp>
+#include "Vector2.hpp"
 
-#include <QuickMaffs/Math/Shapes/Polygon2.hpp>
-#include <QuickMaffs/Math/Shapes/Ball.hpp>
-#include <QuickMaffs/Math/Shapes/Box.hpp>
+#include "Polygon2.hpp"
+#include "Ball.hpp"
+#include "Box.hpp"
 
 namespace quickmaffs
 {
@@ -44,4 +44,4 @@ constexpr bool isPointInside(Box<T, V> const & box_, typename Box<T, V>::VectorT
 
 }
 
-#include "Algorithm.inl"
+#include "Private/ShapeAlgorithms.inl"
