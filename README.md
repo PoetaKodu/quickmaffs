@@ -1,10 +1,10 @@
-# quickmaffs
+# QuickMaffs
 A C++17 custom math library that includes vector calculations, length, random numbers, etc.
 
 ## How to include
 
-Add to include directories path to the `quickmaffs/include/QuickMaffs` directory,
-and include the [Everything.hpp](quickmaffs/include/QuickMaffs/Everything.hpp) file:
+Add to include directories path to the `include/QuickMaffs` directory,
+and include the [Everything.hpp](include/QuickMaffs/Everything.hpp) file:
 
 ```cpp
 #include <QuickMaffs/Everything.hpp>
@@ -13,10 +13,10 @@ and include the [Everything.hpp](quickmaffs/include/QuickMaffs/Everything.hpp) f
 ## How to compile
 
 This is header only library, until `QUICKMAFFS_HEADER_ONLY` is removed from definitions
-from the [Everything.hpp](quickmaffs/include/QuickMaffs/Everything.hpp) file. If you
+from the [Everything.hpp](include/QuickMaffs/Everything.hpp) file. If you
 rely on this library, you should create a guard, as described here:
 
-[**SourceFiles.md**](quickmaffs/src/QuickMaffs/SourceFiles.md)
+[**SourceFiles.md**](src/SourceFiles.md)
 
 Example:
 
@@ -171,7 +171,7 @@ Kilometers getTopSpeedPerHour() const {
 ```
 
 You can easily manipulate length units using `Length<Type, Ratio>` template:
-[src: Length.hpp](quickmaffs/include/QuickMaffs/Math/Length.hpp)
+[src: Length.hpp](include/QuickMaffs/Length.hpp)
 There are aliases defined for:
 
 - **`Nanometers`** equal to `Length<double, std::nano>` equal to `0.000'000'001m`
@@ -195,6 +195,4 @@ Example usage:
 math::Yards yards = 500;
 math::Meters meters = yards; // unlike in vectors, here conversion is implicit
 std::cout << std::fixed << yards.value << " yards is equal to " << meters.value << " meters." << std::endl;
-// possible output:
-// 500.000000 miles is equal to 804500.000000 meters.
 ```
